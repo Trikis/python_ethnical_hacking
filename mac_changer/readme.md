@@ -1,7 +1,7 @@
-This is simply mac changer
+## This is simply mac changer ##
 
-For start:
-   1)You must have python3
-   ---------Run this command:
-   2)chmod u+x mac_changer.py
-   3)./mac_changer.py
+For start:<br/>
+   1.  You must have python3<br/>
+       </br>
+   2.  chmod u+x mac_changer.py<br/>
+   3.  sudo ./mac_changer.py
