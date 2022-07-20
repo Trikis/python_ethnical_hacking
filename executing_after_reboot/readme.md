@@ -12,4 +12,4 @@
 * Then you should to change rules for this service:<br/>
 <b>sudo chmod 644 /lib/systemd/system/myscript.service</b>
 * Then you need to restart systemctl: <br/> <b>sudo systemctl daemon-reload </b>
-*<b> sudo  systemctl enable myscript.service </b>
+* <b> sudo  systemctl enable myscript.service </b>
