@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from operator import le
 import scapy.all as scapy
 import optparse
 
