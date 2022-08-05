@@ -1,5 +1,5 @@
 #                                            This is linux scripting tutorial for begginers<br/>
 <ul>
-<li>Only python tools and the standard linux interface will be used here</li>
+<li>https://drive.google.com/drive/folders/1luyDKRigRdGZ_r9rtrpvAAmSri3wg67m</li>
 
 </ul>
