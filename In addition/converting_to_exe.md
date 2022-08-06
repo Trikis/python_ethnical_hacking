@@ -5,8 +5,8 @@
 
 ### This  commands will creating objects in your working directory.Wi will have two thing:
 <ul>
-  <li>directory dist with executable file</li>
-  <li>and file .spec</li>
+  <li>directory <b>dist</b> with executable file</li>
+  <li>and file <b>.spec</b></li>
   </ul>
 We need  first one. 
 It's done
