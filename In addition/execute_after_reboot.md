@@ -8,8 +8,8 @@
 </pre>
 * How to do it in command promt(cmd or powershell):
 <pre>
-1. reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v {Name} /t {Type} /d {PATH_TO_EVIL_FILE}
-2. Example: reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v test /t REG_SZ /d "C:\evil_file.exe"
+1. REG ADD HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v {Name} /t {Type} /d {PATH_TO_EVIL_FILE}
+2. Example: REG ADD HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v test /t REG_SZ /d "C:\evil_file.exe"
 </pre>
 
 * In addition:
